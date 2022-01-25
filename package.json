@@ -1,0 +1,11 @@
+{
+  "name": "cryptoportfolio",
+  "version": "1.0.0",
+  "description": "crypto portfolio working folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vincent trang",
+  "license": "ISC"
+}
