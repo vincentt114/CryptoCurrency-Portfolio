@@ -5,24 +5,18 @@ class AddRow extends Component {
     constructor (props) {
         super(props);
         this.state = {}
-        this.createRow = this.createRow.bind(this);
+        this.createRow = this.createRow.bind(this)
     }
-    createRow (event) {
-        event.preventDefault();
-        console.log('working!');
-    }
-    createRow2 (value) {
+    createRow (value) {
         return (
-            <div>
-                <Row />
-            </div>
+            document.querySelector('.header').append(<Row />)
         )
     }
     render() {
         return (
             <div className = "addRow">
                 <input type = 'text' placeholder = 'crypto name'></input>
-                <button onClick = { this.createRow }>track</button>
+                <button onClick = { this.createRow }>Add Crypto</button>
             </div>
         );
     };
