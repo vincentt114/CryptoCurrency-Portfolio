@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import React from 'react';
 
 const getData = () => {
 fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10000&page=1&sparkline=false', 
@@ -9,4 +10,6 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
   .catch(err => console.error(err));
 }
 
-let data = getData();
+getData();
+
+export default getData;

@@ -25,7 +25,7 @@ h1 {
 
 .header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     color: rgb(55, 132, 132);
     p {
         font-size: 20px;
@@ -45,7 +45,7 @@ h1 {
 
 .row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: 30px;
     font-size: 12px;
     color: rgb(0, 0, 0);
