@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
 
-let test
-let data = fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10000&page=1&sparkline=false', 
-        {method: 'GET', headers: { Accept: 'application/json' }}
-    )
-    .then(response => response.json())
-    .then(data => console.log(data))
-
 class Row extends Component {
-    constructor() {
+    constructor () {
         super();
+        this.state = {
+            track: false
+        }
+        this.track = this.track.bind(this)
     }
-    
-    render() {
+    track () {
+        this.setState({ track:!this.state.track })
+    }
+    render () {
+        let row_class = this.state.track ? 'row tracked' : 'row untracked'
         return (
-            <div className = "row">
-                <p> <input id="test" type = 'text'></input> </p>
-                <p> <input type = 'number'></input> </p>
-                <p> <input type = 'number'></input> </p>
-                <p> </p>
-                <p> sdfs </p>
-            </div>
+            <div className = {row_class}>
+            <p> <img src = {this.props.img} /></p>
+            <p> {this.props.name}</p>
+            <p> ${this.props.ppu} </p>
+            <p> ${this.props.marketcap} </p>
+            <p> {this.props.ppuChange}%</p>
+            <p> <button onClick = {this.track}>Track</button> </p>
+        </div>
         )
     }
 }
 
 export default Row;
+

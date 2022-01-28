@@ -1,13 +1,21 @@
+$google-blue: #1a73e8;
+$lighten-google-blue: lighten($google-blue, 20%);
+$darken-google-blue: darken($google-blue, 20%);
+$test: rgb(0, 0, 0);
+$black: lighten($test, 25%);
+
+
 body {
     background-color: rgb(255, 255, 255);
-    max-width: 960px;
+    max-width: 1400px;
     margin: auto;
 };
 
 h1 {
+    font-size: 60px;
     display: flex;
     justify-content: center;
-    color:rgb(55, 132, 132)
+    color:$darken-google-blue
 }
 
 .addRow {
@@ -25,23 +33,30 @@ h1 {
         margin-left: auto;
         margin-right: auto;
     }
-    
 } 
+
+.untracked {
+    
+}
+
+.tracked {
+    background-color: $lighten-google-blue;
+}
 
 .header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    color: rgb(55, 132, 132);
+    grid-template-columns: .25fr 1fr 1fr 1fr 1fr .5fr;
+    color: $darken-google-blue;
     p {
-        font-size: 20px;
+        font-size: 25px;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-top-style: solid;
+        border-top: solid;
         border-bottom: solid;
         border-width: 2px;
-        border-color: rgb(155, 102, 102);
+        border-color: rgb(0, 0, 0);
         margin-top: 0;
         margin-bottom: 0;
         padding: auto auto auto auto;
@@ -50,22 +65,61 @@ h1 {
 
 .row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: .25fr 1fr 1fr 1fr 1fr .5fr;
     height: 30px;
     font-size: 12px;
-    color: rgb(0, 0, 0);
+    color: $black;
 
     p {
-        font-size: 16px;
+        font-family: arial;
+        font-size: 22px;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
+        // border-top: solid;
         border-bottom: solid;
         border-width: 2px;
-        border-color: rgb(155, 102, 102);
+        border-color: rgb(0, 0, 0);
         margin-top: 0;
         margin-bottom: 0;
         padding: auto auto auto auto;
     }
+}
+
+img {
+    height: 28px;
+    width: auto;
+}
+
+button {
+    background-color: white;
+    color: $google-blue;
+    border-color: $google-blue;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: arial;
+    width: 90px;
+    height: 25px;
+}
+
+button:hover {
+    background-color: $google-blue;
+    color: white;
+}
+
+#addcrypto {
+    margin-top: 40px;
+    font: arial;
+    font-size: 18px;
+    color: $black;
+    height: 30px;
+    width: 230px;
+}
+
+#addcryptobutton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 107px;
 }

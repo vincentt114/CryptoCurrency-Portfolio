@@ -15,8 +15,8 @@ class AddRow extends Component {
     render() {
         return (
             <div className = "addRow">
-                <input type = 'text' placeholder = 'crypto name'></input>
-                <button onClick = { this.createRow }>Add Crypto</button>
+                <input id = "addcrypto" type = 'text' placeholder = 'Enter CryptoCurrency Name'></input>
+                <button id = "addcryptobutton" onClick = { this.createRow }>Add Crypto</button>
             </div>
         );
     };
